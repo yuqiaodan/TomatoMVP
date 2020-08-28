@@ -3,7 +3,7 @@ package qiaodan.yu.tomatomvp.presenter
 import android.content.Context
 import com.fly.tour.common.mvp.BasePresenter
 import com.fly.tour.common.mvp.BaseView
-import com.fly.tour.db.entity.NewsDetail
+
 import qiaodan.yu.tomatomvp.contract.MainContract
 import qiaodan.yu.tomatomvp.model.MainModel
 

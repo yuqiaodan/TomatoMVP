@@ -8,8 +8,9 @@ import com.fly.tour.common.mvp.BaseModel
 import com.fly.tour.common.mvp.BaseRefreshPresenter
 import com.fly.tour.common.mvp.BaseRefreshView
 import com.fly.tour.common.util.log.KLog
-import com.refresh.lib.BaseRefreshLayout
-import com.refresh.lib.DaisyRefreshLayout
+import com.fly.tour.common.view.refresh.BaseRefreshLayout
+import com.fly.tour.common.view.refresh.DaisyRefreshLayout
+
 
 /**
  * Description: <下拉刷新></下拉刷新>、上拉加载更多的Fragment><br>

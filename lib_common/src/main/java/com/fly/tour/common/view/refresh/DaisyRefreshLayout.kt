@@ -1,4 +1,4 @@
-package com.refresh.lib
+package com.fly.tour.common.view.refresh
 
 import android.content.Context
 import android.os.Build

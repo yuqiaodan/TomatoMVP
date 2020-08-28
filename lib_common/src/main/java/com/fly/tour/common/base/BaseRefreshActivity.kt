@@ -5,8 +5,9 @@ import androidx.annotation.RequiresApi
 import com.fly.tour.common.mvp.BaseModel
 import com.fly.tour.common.mvp.BaseRefreshPresenter
 import com.fly.tour.common.mvp.BaseRefreshView
-import com.refresh.lib.BaseRefreshLayout
-import com.refresh.lib.DaisyRefreshLayout
+import com.fly.tour.common.view.refresh.BaseRefreshLayout
+import com.fly.tour.common.view.refresh.DaisyRefreshLayout
+
 
 /**
  * Description: <下拉刷新></下拉刷新>、上拉加载更多的Activity><br>

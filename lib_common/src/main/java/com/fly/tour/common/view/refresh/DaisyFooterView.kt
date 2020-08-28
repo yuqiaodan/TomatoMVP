@@ -1,4 +1,4 @@
-package com.refresh.lib
+package com.fly.tour.common.view.refresh
 
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
@@ -12,8 +12,9 @@ import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.annotation.RequiresApi
+import com.fly.tour.common.R
+import com.fly.tour.common.view.refresh.contract.PushContract
 
-import com.refresh.lib.contract.PushContract
 
 /**
  * Description: <DaisyHeaderView><br>
@@ -22,7 +23,8 @@ import com.refresh.lib.contract.PushContract
  * Version: V1.0.0<br>
  * Update: <br>
 </DaisyHeaderView> */
-class DaisyFooterView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) : RelativeLayout(context, attrs), PushContract {
+class DaisyFooterView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) : RelativeLayout(context, attrs),
+    PushContract {
 
     private lateinit var mTxtLoading: TextView
     private lateinit var mImgDaisy: ImageView

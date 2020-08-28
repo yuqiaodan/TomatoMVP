@@ -1,4 +1,4 @@
-package com.refresh.lib
+package com.fly.tour.common.view.refresh
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter

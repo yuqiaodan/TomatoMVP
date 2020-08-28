@@ -1,4 +1,4 @@
-package com.refresh.lib
+package com.fly.tour.common.view.refresh
 
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
@@ -11,7 +11,8 @@ import android.view.animation.LinearInterpolator
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
-import com.refresh.lib.contract.PullContract
+import com.fly.tour.common.R
+import com.fly.tour.common.view.refresh.contract.PullContract
 
 /**
  * Description: <DaisyHeaderView><br>
@@ -20,7 +21,8 @@ import com.refresh.lib.contract.PullContract
  * Version: V1.0.0<br>
  * Update: <br>
 </DaisyHeaderView> */
-class DaisyHeaderView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) : RelativeLayout(context, attrs), PullContract {
+class DaisyHeaderView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) : RelativeLayout(context, attrs),
+    PullContract {
 
     private lateinit var mTxtLoading: TextView
     private lateinit var mImgDaisy: ImageView

@@ -41,8 +41,8 @@ android {
 
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
-    api project(":lib_refresh_layout")
-    api project(':lib_fly_db')
+
+
 
     api deps.kotlin_stdlib_jdk7
     api deps.androidx_appcompat
