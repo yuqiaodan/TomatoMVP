@@ -19,4 +19,7 @@ class MainPresenter(mContext: Context) :BasePresenter<MainModel,MainContract.Vie
         mView?.showData(str!!)
     }
 
+    fun getMoreData():Int{
+        return 999
+    }
 }
