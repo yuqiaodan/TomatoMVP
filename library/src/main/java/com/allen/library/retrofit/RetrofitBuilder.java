@@ -2,11 +2,13 @@ package com.allen.library.retrofit;
 
 import com.allen.library.gson.GsonAdapter;
 import com.allen.library.http.SSLUtils;
+import com.ihsanbal.logging.Level;
+import com.ihsanbal.logging.LoggingInterceptor;
 
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
-//import okhttp3.logging.HttpLoggingInterceptor;
+import okhttp3.internal.platform.Platform;
 import retrofit2.CallAdapter;
 import retrofit2.Converter;
 import retrofit2.Retrofit;
@@ -94,9 +96,13 @@ public class RetrofitBuilder {
         SSLUtils.SSLParams sslParams = SSLUtils.getSslSocketFactory();
         builder.sslSocketFactory(sslParams.sSLSocketFactory, sslParams.trustManager);
 
- /*       HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor(new RxHttpLogger());
-        loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-        builder.addInterceptor(loggingInterceptor);*/
+        LoggingInterceptor loggingInterceptor = new LoggingInterceptor.Builder()
+                .setLevel(Level.BASIC)//这里可以设置日志等级
+                .log(Platform.INFO)
+                .request("Request")
+                .response("Response")
+                .build();
+        builder.addInterceptor(loggingInterceptor);
 
         return builder.build();
     }

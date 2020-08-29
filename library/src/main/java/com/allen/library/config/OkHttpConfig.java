@@ -9,8 +9,9 @@ import com.allen.library.http.SSLUtils;
 import com.allen.library.interceptor.HeaderInterceptor;
 import com.allen.library.interceptor.NetCacheInterceptor;
 import com.allen.library.interceptor.NoNetCacheInterceptor;
-//import com.allen.library.interceptor.RxHttpLogger;
 import com.allen.library.interfaces.BuildHeadersListener;
+import com.ihsanbal.logging.Level;
+import com.ihsanbal.logging.LoggingInterceptor;
 
 import java.io.File;
 import java.io.InputStream;
@@ -22,6 +23,7 @@ import javax.net.ssl.HostnameVerifier;
 import okhttp3.Cache;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
+import okhttp3.internal.platform.Platform;
 
 /**
  * <pre>
@@ -202,21 +204,16 @@ public class OkHttpConfig {
          */
         private void setDebugConfig() {
             if (isDebug) {
-/*                HttpLoggingInterceptor logInterceptor = new HttpLoggingInterceptor(new RxHttpLogger());
-                logInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-                okHttpClientBuilder.addInterceptor(logInterceptor);*/
+                LoggingInterceptor loggingInterceptor = new LoggingInterceptor.Builder()
+                        .setLevel(Level.BASIC)//这里可以设置日志等级
+                        .log(Platform.INFO)
+                        .request("Request")
+                        .response("Response")
+                        .build();
+                okHttpClientBuilder.addInterceptor(loggingInterceptor);
             }
         }
-/*        public LoggingInterceptor initLoggingInterceptor(){
-            LoggingInterceptor loggingInterceptor = new LoggingInterceptor.Builder()
-                    .loggable(BuildConfig.DEBUG)
-                    .setLevel(Level.BASIC)//这里可以设置日志等级
-                    .log(Platform.INFO)
-                    .request("Request")
-                    .response("Response")
-                    .build();
-            return loggingInterceptor;
-        }*/
+
 
 
         /**
