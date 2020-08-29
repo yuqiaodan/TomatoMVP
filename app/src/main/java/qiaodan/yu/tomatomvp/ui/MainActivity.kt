@@ -19,7 +19,7 @@ class MainActivity :BaseMvpActivity<MainModel,MainContract.View,MainPresenter>()
     override fun initData() {
         tv_data.setOnClickListener {
             mPresenter?.getDataById(11223)
-            mPresenter?.getMoreData()
+            mPresenter?.searchFromGithub()
         }
     }
     override fun showData(data: String) {

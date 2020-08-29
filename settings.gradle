@@ -1,3 +1,4 @@
+include ':library'
 include ':lib_common'
 include ':app'
 rootProject.name = "TomatoMVP"
