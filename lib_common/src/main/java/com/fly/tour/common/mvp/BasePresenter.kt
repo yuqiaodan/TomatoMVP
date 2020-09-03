@@ -1,6 +1,9 @@
 package com.fly.tour.common.mvp
 
 import android.content.Context
+import android.content.Intent
+import android.os.Bundle
+import android.os.PersistableBundle
 
 import com.trello.rxlifecycle2.LifecycleProvider
 
@@ -48,4 +51,43 @@ abstract class BasePresenter<M : BaseModel, V>(protected var mContext: Context) 
     fun injectLifecycle(lifecycle: LifecycleProvider<*>) {
         mModel?.injectLifecycle(lifecycle)
     }
+
+    fun onCreate(savedInstanceState: Bundle?) {}
+    fun onDestroy() {
+        detach()
+    }
+
+     fun onStart() {
+    }
+     fun onResume() {
+    }
+
+     fun onPause() {
+    }
+
+     fun onStop() {
+    }
+
+     fun onRestart() {
+    }
+
+     fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+    }
+
+     fun onRestoreInstanceState(savedInstanceState: Bundle) {
+    }
+
+     fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+    }
+
+     fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    }
+     fun onNewIntent(intent: Intent?) {
+
+    }
+
 }

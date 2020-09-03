@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.ViewStub
 import android.widget.TextView
-import com.alibaba.android.arouter.launcher.ARouter
 import com.fly.tour.common.R
 import com.fly.tour.common.event.common.BaseFragmentEvent
 import com.fly.tour.common.mvp.BaseView
@@ -53,7 +52,6 @@ abstract class BaseFragment : Fragment(), BaseView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mActivity = (activity as RxAppCompatActivity?)!!
-        ARouter.getInstance().inject(this)
         EventBus.getDefault().register(this)
     }
 

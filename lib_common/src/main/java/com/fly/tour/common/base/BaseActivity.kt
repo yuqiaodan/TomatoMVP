@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewStub
 import android.widget.TextView
 
-import com.alibaba.android.arouter.launcher.ARouter
 import com.fly.tour.common.R
 import com.fly.tour.common.event.common.BaseActivityEvent
 import com.fly.tour.common.manager.ActivityManager
@@ -52,7 +51,6 @@ abstract class BaseActivity : RxAppCompatActivity(), BaseView {
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         setContentView(R.layout.activity_root)
         initCommonView()
-        ARouter.getInstance().inject(this)
         initListener()
         initData()
         EventBus.getDefault().register(this)

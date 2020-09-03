@@ -73,6 +73,5 @@ dependencies {
 
     annotationProcessor deps.glide_compiler
 
-    api deps.arouter_api
-    kapt deps.arouter_compiler
+
 }
