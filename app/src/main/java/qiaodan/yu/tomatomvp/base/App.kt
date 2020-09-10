@@ -1,9 +1,10 @@
 package qiaodan.yu.tomatomvp.base
 
 import android.content.Context
-import com.allen.library.RxHttpUtils
-import com.allen.library.config.OkHttpConfig
-import com.fly.tour.common.BaseApplication
+
+import com.fly.tomato.common.BaseApplication
+import com.fly.tomato.common.http.RxHttpUtils
+import com.fly.tomato.common.http.config.OkHttpConfig
 
 class App: BaseApplication() {
     companion object{
@@ -21,7 +22,7 @@ class App: BaseApplication() {
 
 
    private fun initHttp(){
-        val okHttpClient=OkHttpConfig.Builder(this).setDebug(true).build()
+        val okHttpClient= OkHttpConfig.Builder(this).setDebug(true).build()
         RxHttpUtils
             .getInstance()
             .init(this)

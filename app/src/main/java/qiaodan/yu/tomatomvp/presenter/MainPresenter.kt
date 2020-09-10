@@ -2,12 +2,12 @@ package qiaodan.yu.tomatomvp.presenter
 
 import android.content.Context
 import android.util.Log
-import com.allen.library.RxHttpUtils
-import com.allen.library.interceptor.Transformer
-import com.allen.library.observer.CommonObserver
+import com.fly.tomato.common.http.RxHttpUtils
+import com.fly.tomato.common.http.interceptor.Transformer
+import com.fly.tomato.common.http.observer.CommonObserver
 
-import com.fly.tour.common.mvp.BasePresenter
-import com.fly.tour.common.mvp.BaseView
+
+import com.fly.tomato.common.mvp.BasePresenter
 
 import qiaodan.yu.tomatomvp.contract.MainContract
 import qiaodan.yu.tomatomvp.https.Api

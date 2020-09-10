@@ -1,6 +1,6 @@
 package qiaodan.yu.tomatomvp.contract
 
-import com.fly.tour.common.mvp.BaseView
+import com.fly.tomato.common.mvp.BaseView
 
 interface MainContract {
     interface View : BaseView {

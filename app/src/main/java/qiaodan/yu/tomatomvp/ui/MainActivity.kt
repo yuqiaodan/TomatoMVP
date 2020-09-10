@@ -1,7 +1,7 @@
 package qiaodan.yu.tomatomvp.ui
 
 import android.os.Bundle
-import com.fly.tour.common.base.BaseMvpActivity
+import com.fly.tomato.common.base.BaseMvpActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import qiaodan.yu.tomatomvp.R
 import qiaodan.yu.tomatomvp.contract.MainContract

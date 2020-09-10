@@ -1,7 +1,7 @@
 package qiaodan.yu.tomatomvp.model
 
 import android.content.Context
-import com.fly.tour.common.mvp.BaseModel
+import com.fly.tomato.common.mvp.BaseModel
 import qiaodan.yu.tomatomvp.contract.MainContract
 
 class MainModel(context: Context) :BaseModel(context),MainContract.Model {

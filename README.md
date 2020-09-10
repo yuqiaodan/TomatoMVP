@@ -3,6 +3,10 @@
 FlyTour V5.0.0进行部分修改精简 
 原地址：https://github.com/mxdldev/android-mvp-mvvm-flytour
 
+本框架的网络请求来自于：https://github.com/lygttpod/RxHttpUtils
+
+关于网络请求部分，只修改了网络请求的日志打印，但其还有非常多待优化的部分，以后会进行优化或者更换框架，目前就这样了。
+
 本人的MVP架构 这是这是一个非常好且单纯的MVP例子 后续会添加各种实用的工具类和网络请求框架等
 
 ##### 一.导入
