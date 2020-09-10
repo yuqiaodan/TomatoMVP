@@ -4,7 +4,7 @@ package com.fly.tomato.common.http.observer;
 import android.text.TextUtils;
 
 import com.fly.tomato.common.http.base.BaseObserver;
-import com.fly.tomato.common.http.utils.ToastUtils;
+import com.fly.tomato.common.util.ToastUtil;
 
 import io.reactivex.disposables.Disposable;
 
@@ -41,7 +41,7 @@ public abstract class CommonObserver<T> extends BaseObserver<T> {
     @Override
     public void doOnError(String errorMsg) {
         if (!isHideToast() && !TextUtils.isEmpty(errorMsg)) {
-            ToastUtils.showToast(errorMsg);
+            ToastUtil.INSTANCE.showToast(errorMsg);
         }
         onError(errorMsg);
     }

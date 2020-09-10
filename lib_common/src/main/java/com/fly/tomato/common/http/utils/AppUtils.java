@@ -49,7 +49,7 @@ public class AppUtils {
 
         Context context = RxHttpUtils.getContext();
 
-        String uuid = (String) SPUtils.get(context, "PHONE_UUID", "");
+        String uuid = (String) HttpSPUtils.get(context, "PHONE_UUID", "");
 
         if (TextUtils.isEmpty(uuid)) {
 
@@ -63,7 +63,7 @@ public class AppUtils {
                 UUID deviceUuid = new UUID(androidId.hashCode(), ((long) tmDevice.hashCode() << 32) | tmSerial.hashCode());
                 String uniqueId = deviceUuid.toString();
                 uuid = uniqueId;
-                SPUtils.put(context, "PHONE_UUID", uuid);
+                HttpSPUtils.put(context, "PHONE_UUID", uuid);
 
             } catch (Exception e) {
                 e.printStackTrace();

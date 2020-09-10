@@ -14,8 +14,8 @@ import java.util.Set;
  * Created by allen on 2017/5/10.
  */
 
-public class SPUtils {
-    public SPUtils() {
+public class HttpSPUtils {
+    public HttpSPUtils() {
         /* cannot be instantiated */
         throw new UnsupportedOperationException("cannot be instantiated");
     }
