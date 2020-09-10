@@ -22,8 +22,28 @@ abstract class BaseMvpFragment<M : BaseModel, V, P : BasePresenter<M, V>> : Base
     }
 
     override fun onDestroy() {
-        mPresenter?.detach()
+        mPresenter?.onDestroy()
         super.onDestroy()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        mPresenter?.onStart()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mPresenter?.onResume()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        mPresenter?.onPause()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        mPresenter?.onStop()
     }
 
     abstract fun initPresenter(): P

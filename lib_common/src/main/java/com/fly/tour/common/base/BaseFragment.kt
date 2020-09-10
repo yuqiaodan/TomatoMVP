@@ -146,7 +146,7 @@ abstract class BaseFragment : Fragment(), BaseView {
     }
     abstract fun onBindLayout(): Int
 
-    abstract override fun initData()
+     override fun initData(){}
 
     override fun initListener() {}
 

@@ -107,7 +107,7 @@ abstract class BaseActivity : RxAppCompatActivity(), BaseView {
     }
 
     open fun enableToolbar(): Boolean {
-        return true
+        return false
     }
 
     override fun onDestroy() {
@@ -118,7 +118,7 @@ abstract class BaseActivity : RxAppCompatActivity(), BaseView {
 
     abstract fun onBindLayout(): Int
 
-    abstract override fun initData()
+     override fun initData(){}
 
     override fun initListener() {}
 

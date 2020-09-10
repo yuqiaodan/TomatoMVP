@@ -1,5 +1,6 @@
 package qiaodan.yu.tomatomvp.ui
 
+import android.os.Bundle
 import com.fly.tour.common.base.BaseMvpActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import qiaodan.yu.tomatomvp.R
@@ -16,19 +17,18 @@ class MainActivity :BaseMvpActivity<MainModel,MainContract.View,MainPresenter>()
         return R.layout.activity_main
     }
 
-    override fun initData() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        initView()
+    }
+    fun initView(){
         tv_data.setOnClickListener {
             mPresenter?.getDataById(11223)
             mPresenter?.searchFromGithub()
         }
+
     }
     override fun showData(data: String) {
         tv_data.text = data
     }
-
-    override fun enableToolbar(): Boolean {
-        return false
-    }
-
-
 }
