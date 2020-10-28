@@ -21,7 +21,7 @@ class MainActivity :BaseMvpActivity<MainModel,MainContract.View,MainPresenter>()
         super.onCreate(savedInstanceState)
         initView()
     }
-    fun initView(){
+   private fun initView(){
         tv_data.setOnClickListener {
             mPresenter?.getDataById(11223)
             mPresenter?.searchFromGithub()

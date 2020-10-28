@@ -1,7 +1,6 @@
 package com.fly.tomato.common.http.base;
 
 
-
 import com.fly.tomato.common.http.exception.ApiException;
 import com.fly.tomato.common.http.interfaces.ISubscriber;
 import com.fly.tomato.common.http.manage.RxHttpManager;
@@ -34,9 +33,10 @@ public abstract class BaseObserver<T> implements Observer<T>, ISubscriber<T> {
      * 标记网络请求的tag
      * tag下的一组或一个请求，用来处理一个页面的所以请求或者某个请求
      * 设置一个tag就行就可以取消当前页面所有请求或者某个请求了
+     *
      * @return string
      */
-    protected String setTag(){
+    protected String setTag() {
         return null;
     }
 
@@ -53,8 +53,7 @@ public abstract class BaseObserver<T> implements Observer<T>, ISubscriber<T> {
 
     @Override
     public void onError(@NonNull Throwable e) {
-        String error = ApiException.handleException(e).getMessage();
-        setError(error);
+        onHttpError(ApiException.handleException(e));
     }
 
 
@@ -63,9 +62,5 @@ public abstract class BaseObserver<T> implements Observer<T>, ISubscriber<T> {
         doOnCompleted();
     }
 
-
-    private void setError(String errorMsg) {
-        doOnError(errorMsg);
-    }
 
 }

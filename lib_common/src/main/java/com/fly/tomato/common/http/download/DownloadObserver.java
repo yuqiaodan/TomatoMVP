@@ -3,6 +3,7 @@ package com.fly.tomato.common.http.download;
 import android.annotation.SuppressLint;
 
 import com.fly.tomato.common.http.base.BaseObserver;
+import com.fly.tomato.common.http.exception.ApiException;
 import com.fly.tomato.common.http.manage.RxHttpManager;
 
 import java.io.IOException;
@@ -65,8 +66,8 @@ public abstract class DownloadObserver extends BaseObserver<ResponseBody> {
 
 
     @Override
-    public void doOnError(String errorMsg) {
-        onError(errorMsg);
+    public void onHttpError(ApiException apiException) {
+        onError(apiException.getMessage());
     }
 
     @Override
@@ -113,7 +114,7 @@ public abstract class DownloadObserver extends BaseObserver<ResponseBody> {
                                     .subscribe(new Consumer<String>() {
                                         @Override
                                         public void accept(String s) throws Exception {
-                                            doOnError(s);
+
                                         }
                                     });
                         }

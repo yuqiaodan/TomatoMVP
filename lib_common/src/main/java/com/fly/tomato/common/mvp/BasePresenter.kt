@@ -52,41 +52,43 @@ abstract class BasePresenter<M : BaseModel, V>(protected var mContext: Context) 
         mModel?.injectLifecycle(lifecycle)
     }
 
-    fun onCreate(savedInstanceState: Bundle?) {}
-    fun onDestroy() {
+    open fun onCreate(savedInstanceState: Bundle?) {}
+    open fun onDestroy() {
         detach()
     }
 
-     fun onStart() {
-    }
-     fun onResume() {
+    open fun onStart() {
     }
 
-     fun onPause() {
+    open fun onResume() {
     }
 
-     fun onStop() {
+    open fun onPause() {
     }
 
-     fun onRestart() {
+    open fun onStop() {
     }
 
-     fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+    open fun onRestart() {
     }
 
-     fun onRestoreInstanceState(savedInstanceState: Bundle) {
+    open fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
     }
 
-     fun onRequestPermissionsResult(
+    open fun onRestoreInstanceState(savedInstanceState: Bundle) {
+    }
+
+    open fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
         grantResults: IntArray
     ) {
     }
 
-     fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
     }
-     fun onNewIntent(intent: Intent?) {
+
+    fun onNewIntent(intent: Intent?) {
 
     }
 

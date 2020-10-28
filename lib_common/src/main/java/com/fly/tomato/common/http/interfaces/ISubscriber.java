@@ -1,5 +1,7 @@
 package com.fly.tomato.common.http.interfaces;
 
+import com.fly.tomato.common.http.exception.ApiException;
+
 import io.reactivex.disposables.Disposable;
 
 /**
@@ -22,9 +24,9 @@ public interface ISubscriber<T> {
     /**
      * 错误回调
      *
-     * @param errorMsg 错误信息
+     * @param apiException 错误信息
      */
-    void doOnError(String errorMsg);
+    void onHttpError(ApiException apiException);
 
     /**
      * 成功回调

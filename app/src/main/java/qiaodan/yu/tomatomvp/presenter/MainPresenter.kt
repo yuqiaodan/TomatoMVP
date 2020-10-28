@@ -8,6 +8,7 @@ import com.fly.tomato.common.http.observer.CommonObserver
 
 
 import com.fly.tomato.common.mvp.BasePresenter
+import com.google.gson.Gson
 
 import qiaodan.yu.tomatomvp.contract.MainContract
 import qiaodan.yu.tomatomvp.https.Api
