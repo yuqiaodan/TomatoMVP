@@ -18,7 +18,6 @@ abstract class BaseMvpFragment<M : BaseModel, V, P : BasePresenter<M, V>> : Base
         super.onCreate(savedInstanceState)
         mPresenter = initPresenter()
         mPresenter?.attach(this as V)
-        mPresenter?.injectLifecycle(mActivity)
     }
 
     override fun onDestroy() {

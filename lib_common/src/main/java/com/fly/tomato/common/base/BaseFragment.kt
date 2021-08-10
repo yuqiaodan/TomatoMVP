@@ -5,9 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.fly.tomato.common.R
-import com.trello.rxlifecycle2.components.support.RxAppCompatActivity
-import org.greenrobot.eventbus.EventBus
 
 /**
  * Description: <BaseFragment><br>
@@ -17,15 +14,7 @@ import org.greenrobot.eventbus.EventBus
  * Update:     <br>
 </BaseFragment> */
 abstract class BaseFragment : Fragment() {
-    protected lateinit var mActivity: RxAppCompatActivity
     protected lateinit var mView: View
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        mActivity = (activity as RxAppCompatActivity?)!!
-        EventBus.getDefault().register(this)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,10 +25,7 @@ abstract class BaseFragment : Fragment() {
         return mView
     }
 
-
-
     abstract fun onBindLayout(): Int
-
 
 
 }

@@ -5,8 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 
-import com.trello.rxlifecycle2.LifecycleProvider
-
 
 /**
  * Description: <BasePresenter><br>
@@ -47,10 +45,6 @@ abstract class BasePresenter<M : BaseModel, V>(protected var mContext: Context) 
     }
 
     abstract fun initModel(): M
-
-    fun injectLifecycle(lifecycle: LifecycleProvider<*>) {
-        mModel?.injectLifecycle(lifecycle)
-    }
 
     open fun onCreate(savedInstanceState: Bundle?) {}
     open fun onDestroy() {

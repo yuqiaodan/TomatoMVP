@@ -2,7 +2,6 @@ package com.fly.tomato.common.mvp
 
 import android.content.Context
 
-import com.trello.rxlifecycle2.LifecycleProvider
 
 /**
  * Description: <BaseModel><br>
@@ -12,12 +11,6 @@ import com.trello.rxlifecycle2.LifecycleProvider
  * Update:     <br>
 </BaseModel> */
 open class BaseModel(val context: Context) {
-    var lifecycle: LifecycleProvider<*>? = null
-        private set
-
-    fun injectLifecycle(lifecycle: LifecycleProvider<*>) {
-        this.lifecycle = lifecycle
-    }
 
     fun destory() {}
 }

@@ -19,7 +19,6 @@ abstract class BaseMvpActivity<M : BaseModel, V, P : BasePresenter<M, V>> : Base
     override fun onCreate(savedInstanceState: Bundle?) {
         mPresenter = initPresenter()
         mPresenter?.attach(this as V)
-        mPresenter?.injectLifecycle(this)
         mPresenter?.onCreate(savedInstanceState)
         super.onCreate(savedInstanceState)
 

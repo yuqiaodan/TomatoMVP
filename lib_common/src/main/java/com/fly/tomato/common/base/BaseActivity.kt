@@ -1,8 +1,8 @@
 package com.fly.tomato.common.base
 
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.fly.tomato.common.manager.ActivityManager
-import com.trello.rxlifecycle2.components.support.RxAppCompatActivity
 
 
 /**
@@ -12,7 +12,7 @@ import com.trello.rxlifecycle2.components.support.RxAppCompatActivity
  * Version:     V1.0.0<br>
  * Update:     <br>
 </BaseActivity> */
-abstract class BaseActivity : RxAppCompatActivity() {
+abstract class BaseActivity : AppCompatActivity(){
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

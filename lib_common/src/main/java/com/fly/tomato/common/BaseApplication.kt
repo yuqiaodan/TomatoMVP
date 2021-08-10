@@ -4,7 +4,7 @@ import android.app.Application
 import android.content.Context
 
 
-import com.facebook.stetho.Stetho
+
 import java.lang.Exception
 
 /**
@@ -18,7 +18,6 @@ open class BaseApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         instance = this
-        Stetho.initializeWithDefaults(this)
     }
 
     companion object {
@@ -41,5 +40,12 @@ open class BaseApplication : Application() {
                 e.printStackTrace()
                 ""
             }
-
+    open val versionCode: Int
+        get() =
+            try {
+                packageManager.getPackageInfo(packageName, 0).versionCode
+            } catch (e: Exception) {
+                e.printStackTrace()
+                0
+            }
 }
