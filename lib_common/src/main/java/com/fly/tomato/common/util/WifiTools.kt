@@ -118,7 +118,7 @@ class WifiTools {
         val connectivityManager =
             context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val networkCallback = object : ConnectivityManager.NetworkCallback() {
-            override fun onAvailable(network: Network?) {
+            override fun onAvailable(network: Network) {
                 //连接成功
             }
 
@@ -132,6 +132,7 @@ class WifiTools {
     }
 
     //Android10以上，通过suggestion连接WIFI
+    @RequiresApi(Build.VERSION_CODES.Q)
     private fun connectBySug(ssid: String, password: String) {
         val suggestion = WifiNetworkSuggestion.Builder()
             .setSsid(ssid)

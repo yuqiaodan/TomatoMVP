@@ -268,7 +268,7 @@ class EnvironmentUtil {
                 applicationInfo = null
             }
 
-            val applicationName = packageManager!!.getApplicationLabel(applicationInfo) as String
+            val applicationName = applicationInfo?.let { packageManager!!.getApplicationLabel(it) } as String
             println(applicationName)
             return applicationName
         }
