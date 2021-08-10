@@ -89,3 +89,11 @@
   *** rewind();
 }
 
+
+# kotlin混淆
+-keep class kotlinx.coroutines.android.AndroidDispatcherFactory {*;}
+# 协程相关混淆过滤
+-keepnames class kotlinx.coroutines.internal.MainDispatcherFactory {}
+-keepnames class kotlinx.coroutines.CoroutineExceptionHandler {}
+-keepnames class kotlinx.coroutines.android.AndroidExceptionPreHandler {}
+-keepnames class kotlinx.coroutines.android.AndroidDispatcherFactory {}
