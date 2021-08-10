@@ -1,9 +1,8 @@
 package qiaodan.yu.tomatomvp.contract
 
-import com.fly.tomato.common.mvp.BaseView
 
 interface MainContract {
-    interface View : BaseView {
+    interface View {
         fun showData(data: String)
     }
     interface Presenter {

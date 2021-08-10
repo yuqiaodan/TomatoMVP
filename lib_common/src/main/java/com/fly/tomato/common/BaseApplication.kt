@@ -5,7 +5,6 @@ import android.content.Context
 
 
 import com.facebook.stetho.Stetho
-import com.fly.tomato.common.util.log.KLog
 import java.lang.Exception
 
 /**
@@ -19,7 +18,6 @@ open class BaseApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         instance = this
-        KLog.init(BuildConfig.IS_DEBUG)
         Stetho.initializeWithDefaults(this)
     }
 

@@ -1,11 +1,8 @@
 package com.fly.tomato.common.http.observer;
 
 
-import android.text.TextUtils;
-
 import com.fly.tomato.common.http.base.BaseObserver;
 import com.fly.tomato.common.http.exception.ApiException;
-import com.fly.tomato.common.util.ToastUtil;
 
 import io.reactivex.disposables.Disposable;
 
@@ -41,13 +38,9 @@ public abstract class CommonObserver<T> extends BaseObserver<T> {
 
     @Override
     public void onHttpError(ApiException apiException) {
-        String errorMsg=apiException.getMessage();
-        if (!isHideToast() && !TextUtils.isEmpty(errorMsg)) {
-            ToastUtil.INSTANCE.showToast(errorMsg);
-        }
+        String errorMsg = apiException.getMessage();
         onError(errorMsg);
     }
-
 
 
     @Override

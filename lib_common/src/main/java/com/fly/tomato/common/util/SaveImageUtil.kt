@@ -59,7 +59,6 @@ class SaveImageUtil {
     //保存bitmap到指定文件夹 并发出广播通知系统刷新媒体库
     fun saveBitmap(bitmap: Bitmap, imageName: String) {
         //正在保存
-        //Toast.makeText(context, App.context.getText(R.string.saving), Toast.LENGTH_SHORT).show()
         checkDir()
 
         val file = File(appDir, "$imageName.jpg")
@@ -85,11 +84,9 @@ class SaveImageUtil {
             } catch (e: FileNotFoundException) {
                 e.printStackTrace()
                 Log.d(TAG, "保存失败1${e.message}")
-                //Toast.makeText(context, "${App.context.getText(R.string.save_failed)}:${e.message}", Toast.LENGTH_SHORT).show()
             } catch (e: IOException) {
                 e.printStackTrace()
                 Log.d(TAG, "保存失败2${e.message}")
-                //Toast.makeText(context, "${App.context.getText(R.string.save_failed)}:${e.message}", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -109,29 +106,4 @@ class SaveImageUtil {
             }
         }
     }
-
-    //保存文件到app缓存目录准备分享 耗时操作 请最好在异步线程调用
-/*    fun cacheBitmapForShare(bitmap: Bitmap): Uri? {
-        val dir = File(getCacheDir().absolutePath + File.separator + "Share")
-        if (!dir.exists()) {
-            dir.mkdir()
-        }
-        val file = File(dir,"Share${System.currentTimeMillis()}.jpg" )
-        Log.d(TAG, "图片缓存地址${file.absolutePath}")
-        try {
-            val fileOutputStream = FileOutputStream(file)
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream)
-            fileOutputStream.flush()
-            fileOutputStream.close()
-            val uri=FileProvider.getUriForFile(context,context.packageName+".fileProvider",file)
-            return uri
-        } catch (e: FileNotFoundException) {
-            e.printStackTrace()
-            Log.d(TAG, "缓存失败1${e.message}")
-        } catch (e: IOException) {
-            e.printStackTrace()
-            Log.d(TAG, "缓存失败2${e.message}")
-        }
-        return null
-    }*/
 }

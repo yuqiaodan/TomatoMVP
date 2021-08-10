@@ -29,19 +29,19 @@ abstract class BasePresenter<M : BaseModel, V>(protected var mContext: Context) 
         detachModel()
     }
 
-    fun attachView(view: V) {
+    private fun attachView(view: V) {
         mView = view
     }
 
-    fun detachView() {
+    private fun detachView() {
         mView = null
     }
 
-    fun attachModel() {
+    private fun attachModel() {
         mModel = initModel()
     }
 
-    fun detachModel() {
+    private fun detachModel() {
         mModel?.destory()
         mModel = null
     }

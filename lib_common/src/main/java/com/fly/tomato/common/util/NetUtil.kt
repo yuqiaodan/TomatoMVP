@@ -24,13 +24,6 @@ object NetUtil {
         return isWifiConnection(context!!) || isStationConnection(context!!)
     }
 
-    fun checkNetToast(): Boolean {
-        val isNet = checkNet()
-        if (!isNet) {
-            ToastUtil.showToast("网络不给力哦！")
-        }
-        return isNet
-    }
 
     /**
      * 是否使用基站联网

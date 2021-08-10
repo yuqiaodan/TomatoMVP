@@ -50,6 +50,7 @@ abstract class BaseMvpActivity<M : BaseModel, V, P : BasePresenter<M, V>> : Base
 
     override fun onStop() {
         super.onStop()
+        mPresenter?.onStop()
     }
 
     override fun onRestart() {

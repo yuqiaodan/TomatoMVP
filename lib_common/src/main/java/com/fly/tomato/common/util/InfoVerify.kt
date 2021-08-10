@@ -21,11 +21,7 @@ object InfoVerify {
     fun isValidEmail(paramString: String): Boolean {
 
         val regex = "[a-zA-Z0-9_\\.]{1,}@(([a-zA-z0-9]-*){1,}\\.){1,3}[a-zA-z\\-]{1,}"
-        return if (paramString.matches(regex.toRegex())) {
-            true
-        } else {
-            false
-        }
+        return paramString.matches(regex.toRegex())
     }
 
     /**
@@ -36,9 +32,7 @@ object InfoVerify {
      */
     fun isValidQQ(paramString: String): Boolean {
         val regex = "^[1-9](\\d){4,9}$"
-        return if (paramString.matches(regex.toRegex())) {
-            true
-        } else false
+        return paramString.matches(regex.toRegex())
     }
 
     /**
@@ -50,9 +44,7 @@ object InfoVerify {
     fun isValidPlatnum(paramString: String): Boolean {
         if (TextUtils.isEmpty(paramString)) return false
         val regex = "^[\u4e00-\u9fa5]{1}[A-Z_a-z]{1}[A-Z_0-9_a-z]{5}$"
-        return if (paramString.matches(regex.toRegex())) {
-            true
-        } else false
+        return paramString.matches(regex.toRegex())
     }
 
     /**
@@ -65,9 +57,7 @@ object InfoVerify {
         // String regex = "^((13[0-9])|(15[^4,\\D])|(18[0,5-9]))\\d{8}$";
         if (paramString == null) return false
         val regex = "^1\\d{10}$"
-        return if (paramString.matches(regex.toRegex())) {
-            true
-        } else false
+        return paramString.matches(regex.toRegex())
     }
 
     fun isNumeric(str: String): Boolean {
