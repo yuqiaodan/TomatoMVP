@@ -6,8 +6,7 @@ import android.view.inputmethod.InputMethodManager
 
 /**
  * Description: <软键盘的显示与隐藏><br>
- * Author: mxdl<br>
- * Date: 2018/6/11<br>
+ * Author: qiaodan
  * Version: V1.0.0<br>
  * Update: <br>
  *

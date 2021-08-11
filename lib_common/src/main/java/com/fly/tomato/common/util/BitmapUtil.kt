@@ -41,8 +41,7 @@ import java.net.URL
  *  * 11.读取图片的旋转的角度
  *  * 12.将图片按照某个角度进行旋转
  *
- * Author: mxdl<br>
- * Date: 2018/6/11<br>
+ * Author:yuqiaodan
  * Version: V1.0.0<br>
  * Update: <br>
 </BitmapUtil> */

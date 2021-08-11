@@ -9,8 +9,7 @@ import com.fly.tomato.common.mvp.BasePresenter
 
 /**
  * Description: <BaseMvpActivity><br>
- * Author:      mxdl<br>
- * Date:        2018/1/16<br>
+ * Author:      yuqiaodan
  * Version:     V1.0.0<br>
  * Update:     <br>
  */

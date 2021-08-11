@@ -8,8 +8,7 @@ import android.os.PersistableBundle
 
 /**
  * Description: <BasePresenter><br>
- * Author:      mxdl<br>
- * Date:        2018/1/15<br>
+ * Author:      yuqiaodan
  * Version:     V1.0.0<br>
  * Update:     <br>
 </BasePresenter> */

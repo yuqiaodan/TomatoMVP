@@ -9,8 +9,7 @@ import java.lang.Exception
 
 /**
  * Description: <初始化应用程序><br>
- * Author:      mxdl<br>
- * Date:        2018/6/6<br>
+ * Author:      yuqiaodan
  * Version:     V1.0.0<br>
  * Update:     <br>
 </初始化应用程序> */

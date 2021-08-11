@@ -43,8 +43,7 @@ import java.io.InputStreamReader
  *  * 3.获得APK包名
  *  * 4.判断是否已经安装
  *
- * Author: mxdl<br>
- * Date: 2018/6/11<br>
+ * Author: yuqiaodan
  * Version: V1.0.0<br>
  * Update: <br>
 </单位转换工具类> */

@@ -12,8 +12,7 @@ import com.fly.tomato.common.util.NetUtil.NetType.WIFI
 
 /**
  * Description: <ToastUtil><br>
- * Author: mxdl<br>
- * Date: 2018/6/11<br>
+ * Author: yuqiaodan
  * Version: V1.0.0<br>
  * Update: <br>
 </ToastUtil> */

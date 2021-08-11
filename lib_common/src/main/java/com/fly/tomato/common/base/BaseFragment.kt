@@ -8,8 +8,7 @@ import androidx.fragment.app.Fragment
 
 /**
  * Description: <BaseFragment><br>
- * Author:      mxdl<br>
- * Date:        2018/1/15<br>
+ * Author:      yuqiaodan
  * Version:     V1.0.0<br>
  * Update:     <br>
 </BaseFragment> */

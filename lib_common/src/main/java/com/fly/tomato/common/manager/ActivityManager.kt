@@ -7,8 +7,7 @@ import java.util.Stack
 
 /**
  * Description: <ActivityManager><br>
- * Author:      mxdl<br>
- * Date:        2018/3/18<br>
+ * Author:      yuqiaodan
  * Version:     V1.0.0<br>
  * Update:     <br>
 </ActivityManager> */

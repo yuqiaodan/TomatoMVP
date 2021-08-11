@@ -2,8 +2,7 @@ package com.fly.tomato.common.util
 
 /**
  * Description: <SPUtils><br>
- * Author: mxdl<br>
- * Date: 2018/6/19<br>
+ * Author: yuqiaodan
  * Version: V1.0.0<br>
  * Update: <br>
  *

@@ -6,8 +6,7 @@ import java.util.regex.Pattern
 
 /**
  * Description: <FileUtil><br>
- * Author:      mxdl<br>
- * Date:        2018/7/13<br>
+ * Author:      yuqiaodan
  * Version:     V1.0.0<br>
  * Update:     <br>
 </FileUtil> */

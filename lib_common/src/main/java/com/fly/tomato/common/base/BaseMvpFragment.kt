@@ -7,8 +7,7 @@ import com.fly.tomato.common.mvp.BasePresenter
 
 /**
  * Description: <BaseMvpFragment><br>
- * Author:      mxdl<br>
- * Date:        2018/1/15<br>
+ * Author:      yuqiaodan
  * Version:     V1.0.0<br>
  * Update:     <br>
 </BaseMvpFragment> */
