@@ -1,11 +1,4 @@
 # TomatoMVP
-感谢开源 基于门心叼龙大佬的MVP架构项目
-FlyTour V5.0.0进行部分修改精简 
-原地址：https://github.com/mxdldev/android-mvp-mvvm-flytour
-
-本框架的网络请求来自于：https://github.com/lygttpod/RxHttpUtils
-
-关于网络请求部分，只修改了网络请求的日志打印，但其还有非常多待优化的部分，以后会进行优化或者更换框架，目前暂时先这样。
 
 本人的MVP架构 这是这是一个非常好且单纯的MVP例子 后续会添加各种实用的工具类和网络请求框架等
 
@@ -68,6 +61,8 @@ implementation project(":lib_common")
 ```
 <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
 ```
-
-
-
+## 鸣谢
+感谢开源 本项参考学习了FlyTour mvp 根据个人实际需要和理解进行了重构和删改
+原地址：https://github.com/mxdldev/android-mvp-mvvm-flytour
+本框架的网络请求来自于：https://github.com/lygttpod/RxHttpUtils
+关于网络请求部分，只修改了网络请求的日志打印，但其还有非常多待优化的部分，以后会进行优化或者更换框架，目前暂时先这样。
